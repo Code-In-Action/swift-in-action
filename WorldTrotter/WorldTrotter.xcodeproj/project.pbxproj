@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		B03DE39322E4C5E7004F689B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03DE39222E4C5E7004F689B /* AppDelegate.swift */; };
-		B03DE39522E4C5E7004F689B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03DE39422E4C5E7004F689B /* ViewController.swift */; };
 		B03DE39822E4C5E7004F689B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B03DE39622E4C5E7004F689B /* Main.storyboard */; };
 		B03DE39A22E4C5E9004F689B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B03DE39922E4C5E9004F689B /* Assets.xcassets */; };
 		B03DE39D22E4C5E9004F689B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B03DE39B22E4C5E9004F689B /* LaunchScreen.storyboard */; };
 		B03DE3A822E4C5E9004F689B /* WorldTrotterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03DE3A722E4C5E9004F689B /* WorldTrotterTests.swift */; };
 		B03DE3B322E4C5E9004F689B /* WorldTrotterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03DE3B222E4C5E9004F689B /* WorldTrotterUITests.swift */; };
+		B0964BF322E76206008ABA87 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0964BF222E76206008ABA87 /* ConversionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		B03DE38F22E4C5E7004F689B /* WorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03DE39222E4C5E7004F689B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B03DE39422E4C5E7004F689B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B03DE39722E4C5E7004F689B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B03DE39922E4C5E9004F689B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B03DE39C22E4C5E9004F689B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		B03DE3AE22E4C5E9004F689B /* WorldTrotterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldTrotterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03DE3B222E4C5E9004F689B /* WorldTrotterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTrotterUITests.swift; sourceTree = "<group>"; };
 		B03DE3B422E4C5E9004F689B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0964BF222E76206008ABA87 /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +97,8 @@
 		B03DE39122E4C5E7004F689B /* WorldTrotter */ = {
 			isa = PBXGroup;
 			children = (
+				B0964BF222E76206008ABA87 /* ConversionViewController.swift */,
 				B03DE39222E4C5E7004F689B /* AppDelegate.swift */,
-				B03DE39422E4C5E7004F689B /* ViewController.swift */,
 				B03DE39622E4C5E7004F689B /* Main.storyboard */,
 				B03DE39922E4C5E9004F689B /* Assets.xcassets */,
 				B03DE39B22E4C5E9004F689B /* LaunchScreen.storyboard */,
@@ -256,7 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B03DE39522E4C5E7004F689B /* ViewController.swift in Sources */,
+				B0964BF322E76206008ABA87 /* ConversionViewController.swift in Sources */,
 				B03DE39322E4C5E7004F689B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
