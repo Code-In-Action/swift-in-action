@@ -9,5 +9,19 @@
 import UIKit
 
 class ConversionViewController: UIViewController{
+    @IBOutlet var celsiusLabel:UILabel!
+    @IBOutlet var textField: UITextField!
+    @IBAction func fahrenHeitFieldEditingChanged(_ textField: UITextField) {
+        
+        if let text = textField.text, !text.isEmpty{
+            celsiusLabel.text = textField.text
+        } else {
+            celsiusLabel.text = "???"
+            
+        }
+    }
     
+    @IBAction func dismissKeyBoard(_ sender: UITapGestureRecognizer) {
+        textField.resignFirstResponder()
+    }
 }
