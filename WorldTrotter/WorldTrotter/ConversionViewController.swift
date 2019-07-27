@@ -11,6 +11,7 @@ import UIKit
 class ConversionViewController: UIViewController{
     @IBOutlet var celsiusLabel:UILabel!
     @IBOutlet var textField: UITextField!
+    
     @IBAction func fahrenHeitFieldEditingChanged(_ textField: UITextField) {
         
         if let text = textField.text, !text.isEmpty{
@@ -24,4 +25,13 @@ class ConversionViewController: UIViewController{
     @IBAction func dismissKeyBoard(_ sender: UITapGestureRecognizer) {
         textField.resignFirstResponder()
     }
+//    var fahrenHeitValue: Measurement<UnitTempreature>?
+//    var celsiusValue: Measurement<UnitTempreature>? {
+//        if let fahrenheitValue = fahrenHeitValue {
+//            return  fahrenheitValue.converted(to: .celsius)
+//        }  else {
+//            return nil
+//        }
+//    }
+    
 }

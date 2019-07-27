@@ -10,6 +10,21 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="vdF-sE-z9V">
+            <objects>
+                <viewController id="Rqh-oV-ibU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oEP-af-N7r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="P3M-li-Le7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xeS-9J-8Rx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-566" y="-266"/>
+        </scene>
         <!--Conversion View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -26,6 +41,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
                                 <connections>
                                     <action selector="fahrenHeitFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="GUh-Er-aKf"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="3Sj-Wa-C8J"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" fixedFrame="YES" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbC-7r-cpu">
@@ -58,16 +74,26 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.95686274509803915" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="1IF-Y6-VsA" appends="YES" id="0wj-h1-UjC"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="celsiusLabel" destination="hbC-7r-cpu" id="Et2-iI-cFe"/>
+                        <outlet property="textField" destination="BMc-V7-gLp" id="doB-eR-rJo"/>
                         <outlet property="view" destination="hbC-7r-cpu" id="bez-g8-rqS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="1IF-Y6-VsA">
+                    <connections>
+                        <action selector="dismissKeyBoard:" destination="BYZ-38-t0r" id="oXs-gF-HHo"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
+            <point key="canvasLocation" x="50" y="-267"/>
         </scene>
     </scenes>
 </document>
