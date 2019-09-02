@@ -27,7 +27,7 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    let numberFormatter: NumberFormatter = {
+    var numberFormatter: NumberFormatter  = {
         let nf = NumberFormatter()
         nf.numberStyle = .decimal
         nf.minimumFractionDigits = 0
@@ -43,7 +43,7 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         updateCelsiusLabel()
     }
     
-    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+    @IBAction func dismissKeyboard(_ sender: AnyObject) {
         textField.resignFirstResponder()
     }
     
@@ -55,14 +55,12 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func textField(_ textField: UITextField,
-                   shouldChangeCharactersIn range: NSRange,
-                   replacementString string: String) -> Bool {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         let existingTextHasDecimalSeparator = textField.text?.range(of: ".")
         let replacementTextHasDecimalSeparator = string.range(of: ".")
         
-        if existingTextHasDecimalSeparator != nil, replacementTextHasDecimalSeparator != nil {
+        if existingTextHasDecimalSeparator != nil && replacementTextHasDecimalSeparator != nil {
             return false
         } else {
             return true
@@ -78,3 +76,4 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     }
     
 }
+
