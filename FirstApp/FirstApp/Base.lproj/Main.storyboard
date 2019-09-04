@@ -50,9 +50,13 @@
                                 <color key="textColor" red="0.88235294117647056" green="0.34509803921568627" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="yes" spellCheckingType="no" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="fahrenHeitFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="NkQ-Y5-Mvg"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.95686274509803915" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Ygg-Xh-s8K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Fo-6H-9zw"/>
                             <constraint firstItem="6Kz-UC-ALD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="92x-in-aYj"/>
@@ -70,9 +74,21 @@
                             <constraint firstItem="0EU-hN-ESh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xiO-bJ-Z6e"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Akk-Zj-ady" appends="YES" id="7Fh-ub-zYl"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="celsiusLabel" destination="HzD-X2-ERw" id="6qe-Af-Adt"/>
+                        <outlet property="textField" destination="Ygg-Xh-s8K" id="6hg-U6-VrB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Akk-Zj-ady">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="BYZ-38-t0r" id="THT-PB-YOo"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>
