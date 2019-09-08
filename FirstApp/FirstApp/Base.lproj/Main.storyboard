@@ -52,6 +52,8 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="yes" spellCheckingType="no" keyboardType="decimalPad"/>
                                 <connections>
                                     <action selector="fahrenHeitFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="NkQ-Y5-Mvg"/>
+                                    <action selector="fahrenheitFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="5D0-Ob-EvF"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Y41-J7-duz"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -80,13 +82,13 @@
                     </view>
                     <connections>
                         <outlet property="celsiusLabel" destination="HzD-X2-ERw" id="6qe-Af-Adt"/>
-                        <outlet property="textField" destination="Ygg-Xh-s8K" id="6hg-U6-VrB"/>
+                        <outlet property="textField" destination="Ygg-Xh-s8K" id="Vt7-E6-ttH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="Akk-Zj-ady">
                     <connections>
-                        <action selector="dismissKeyboard:" destination="BYZ-38-t0r" id="THT-PB-YOo"/>
+                        <action selector="dismissKeyboard:" destination="BYZ-38-t0r" id="cPw-Qb-mVT"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
