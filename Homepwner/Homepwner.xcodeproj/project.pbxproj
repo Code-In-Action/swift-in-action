@@ -16,6 +16,7 @@
 		B09532FD233912590063EB28 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09532FC233912590063EB28 /* ItemsViewController.swift */; };
 		B09532FF233915710063EB28 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09532FE233915710063EB28 /* Item.swift */; };
 		B095330123391E2C0063EB28 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B095330023391E2C0063EB28 /* ItemStore.swift */; };
+		B0C5B8F0234B8804004A2757 /* Itemell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C5B8EF234B8804004A2757 /* Itemell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		B09532FC233912590063EB28 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		B09532FE233915710063EB28 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		B095330023391E2C0063EB28 /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
+		B0C5B8EF234B8804004A2757 /* Itemell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Itemell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				B022FEFB2329529D005F10E0 /* AppDelegate.swift */,
 				B09532FC233912590063EB28 /* ItemsViewController.swift */,
 				B022FEFF2329529D005F10E0 /* Main.storyboard */,
+				B0C5B8EF234B8804004A2757 /* Itemell.swift */,
 				B022FF022329529F005F10E0 /* Assets.xcassets */,
 				B022FF042329529F005F10E0 /* LaunchScreen.storyboard */,
 				B022FF072329529F005F10E0 /* Info.plist */,
@@ -265,6 +268,7 @@
 				B09532FD233912590063EB28 /* ItemsViewController.swift in Sources */,
 				B09532FF233915710063EB28 /* Item.swift in Sources */,
 				B095330123391E2C0063EB28 /* ItemStore.swift in Sources */,
+				B0C5B8F0234B8804004A2757 /* Itemell.swift in Sources */,
 				B022FEFC2329529D005F10E0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
