@@ -54,29 +54,43 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSo-sr-kWT">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fqc-j5-5es">
+                                            <rect key="frame" x="10" y="33" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skv-VZ-A6g">
+                                            <rect key="frame" x="283" y="22" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSo-sr-kWT">
                                             <rect key="frame" x="10" y="11" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fqc-j5-5es">
-                                            <rect key="frame" x="16" y="33" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skv-VZ-A6g">
-                                            <rect key="frame" x="283" y="11" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="MSo-sr-kWT" firstAttribute="top" secondItem="NLb-NL-FAO" secondAttribute="topMargin" id="8pZ-Fh-AUy"/>
+                                        <constraint firstItem="Fqc-j5-5es" firstAttribute="top" secondItem="MSo-sr-kWT" secondAttribute="bottom" constant="1" id="HIz-O4-i4M"/>
+                                        <constraint firstItem="skv-VZ-A6g" firstAttribute="centerY" secondItem="NLb-NL-FAO" secondAttribute="centerY" id="Jfb-HI-RUM"/>
+                                        <constraint firstItem="MSo-sr-kWT" firstAttribute="leading" secondItem="NLb-NL-FAO" secondAttribute="leadingMargin" constant="-6" id="KFo-8U-vvh"/>
+                                        <constraint firstItem="Fqc-j5-5es" firstAttribute="leading" secondItem="MSo-sr-kWT" secondAttribute="leading" id="Ozx-ya-NFk"/>
+                                        <constraint firstItem="Fqc-j5-5es" firstAttribute="top" secondItem="MSo-sr-kWT" secondAttribute="bottom" constant="1" id="QIn-MA-O32"/>
+                                        <constraint firstItem="Fqc-j5-5es" firstAttribute="leading" secondItem="MSo-sr-kWT" secondAttribute="leading" id="gnJ-MC-wv6"/>
+                                        <constraint firstAttribute="bottom" secondItem="Fqc-j5-5es" secondAttribute="bottom" constant="11" id="rNf-dB-Uvx"/>
+                                        <constraint firstItem="Fqc-j5-5es" firstAttribute="leading" secondItem="NLb-NL-FAO" secondAttribute="leadingMargin" id="rt3-z0-DOu"/>
+                                        <constraint firstAttribute="trailing" secondItem="skv-VZ-A6g" secondAttribute="trailing" constant="50" id="x08-dB-UIC"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="MSo-sr-kWT" id="kkX-fb-RJc"/>
+                                    <outlet property="serialNumberLabel" destination="Fqc-j5-5es" id="dt8-XQ-MSU"/>
+                                    <outlet property="valueLabel" destination="skv-VZ-A6g" id="DlA-3O-0x5"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
