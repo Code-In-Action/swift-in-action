@@ -12,7 +12,7 @@ class ItemsViewController: UITableViewController {
     var itemStore: ItemStore!
     @IBAction func addNewsItem(_ sender: UIButton) {
         let newItem = itemStore.createItem()
-        if let index = itemStore.allItems.index(of: newItem) {
+        if let index = itemStore.allItems.firstIndex(of: newItem) {
             let indexPath = IndexPath(row: index, section: 0)
             tableView.insertRows(at: [indexPath], with: .automatic)
         }
@@ -51,10 +51,9 @@ class ItemsViewController: UITableViewController {
                  
                  // Get the item associated with this row and pass it along
                  let item = itemStore.allItems[row]
-                 let detailViewController
-                     = segue.destination as! DetailViewController
+                 let detailViewController = segue.destination as? DetailViewController
                 
-                 detailViewController.item = item
+                detailViewController!.item = item
              }
          default:
              preconditionFailure("Unexpected segue identifier.")
