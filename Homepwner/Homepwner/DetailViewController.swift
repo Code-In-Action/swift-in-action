@@ -10,6 +10,9 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    @IBAction func takePicture(_ sender: UIBarButtonItem) {
+    }
+    @IBOutlet var imageView: UIImageView!
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
