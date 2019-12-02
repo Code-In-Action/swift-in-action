@@ -1,9 +1,5 @@
 //
-//  ImageStore.swift
-//  Homepwner
-//
-//  Created by Go7hic on 2019/10/30.
-//  Copyright © 2019 Go7hic. All rights reserved.
+//  Copyright © 2015 Big Nerd Ranch
 //
 
 import UIKit
@@ -25,4 +21,3 @@ class ImageStore {
     }
     
 }
-

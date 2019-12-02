@@ -1,27 +1,25 @@
 //
-//  Item.swift
-//  Homepwner
-//
-//  Created by Go7hic on 2019/9/23.
-//  Copyright © 2019 Go7hic. All rights reserved.
+//  Copyright © 2015 Big Nerd Ranch
 //
 
-import UIKit
+import Foundation
 
 class Item: NSObject {
+    
     var name: String
     var valueInDollars: Int
     var serialNumber: String?
-    let dateCreated: NSDate
+    let dateCreated: Date
+    let itemKey: String
     
-    init(name: String, serialNumber: String?, valueInDollars:Int) {
+    init(name: String, serialNumber: String?, valueInDollars: Int) {
         self.name = name
-        self.valueInDollars = valueInDollars
         self.serialNumber = serialNumber
-        self.dateCreated = NSDate()
-        super.init()
-        
+        self.valueInDollars = valueInDollars
+        self.dateCreated = Date()
+        self.itemKey = UUID().uuidString
     }
+    
     convenience init(random: Bool = false) {
         if random {
             let adjectives = ["Fluffy", "Rusty", "Shiny"]
@@ -36,13 +34,14 @@ class Item: NSObject {
             let randomName = "\(randomAdjective) \(randomNoun)"
             let randomValue = Int(arc4random_uniform(100))
             let randomSerialNumber =
-                UUID().uuidString.components(separatedBy: "-").first!
+            UUID().uuidString.components(separatedBy: "-").first!
             
             self.init(name: randomName,
-                      serialNumber: randomSerialNumber,
-                      valueInDollars: randomValue)
+                serialNumber: randomSerialNumber,
+                valueInDollars: randomValue)
         } else {
             self.init(name: "", serialNumber: nil, valueInDollars: 0)
         }
     }
+    
 }

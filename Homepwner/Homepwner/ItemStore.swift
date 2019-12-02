@@ -1,25 +1,30 @@
 //
-//  ItemStore.swift
-//  Homepwner
-//
-//  Created by Go7hic on 2019/9/23.
-//  Copyright © 2019 Go7hic. All rights reserved.
+//  Copyright © 2015 Big Nerd Ranch
 //
 
-import UIKit
+import Foundation
 
 class ItemStore {
     
     var allItems: [Item] = []
     
-    init() {
-        for _ in 0..<5 {
-            createItem()
+    func moveItem(from fromIndex: Int, to toIndex: Int) {
+        if fromIndex == toIndex {
+            return
         }
+        
+        // Get reference to object being moved so you can re-insert it
+        let movedItem = allItems[fromIndex]
+        
+        // Remove item from array
+        allItems.remove(at: fromIndex)
+        
+        // Insert item in array at new location
+        allItems.insert(movedItem, at: toIndex)
     }
     
     @discardableResult func createItem() -> Item {
-         let newItem = Item(random: true)
+        let newItem = Item(random: true)
         
         allItems.append(newItem)
         
@@ -27,18 +32,9 @@ class ItemStore {
     }
     
     func removeItem(_ item: Item) {
-        if let index = allItems.firstIndex(of: item) {
+        if let index = allItems.index(of: item) {
             allItems.remove(at: index)
         }
     }
     
-    func moveItem(from fromIndex: Int, to toIndex: Int) {
-        if (fromIndex == toIndex) {
-            return
-        }
-        let moveItem = allItems[fromIndex]
-        allItems.remove(at: fromIndex)
-        allItems.insert(moveItem, at: toIndex)
-        
-    }
 }
