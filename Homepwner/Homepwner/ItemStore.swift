@@ -6,6 +6,12 @@ import Foundation
 
 class ItemStore {
     
+     init() {
+          if let archivedItems =
+              NSKeyedUnarchiver.unarchiveObject(withFile: itemArchiveURL.path) as? [Item] {
+                  allItems += archivedItems
+          }
+      }
     var allItems: [Item] = []
     
     let itemArchiveURL: URL = {
